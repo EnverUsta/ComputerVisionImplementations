@@ -1,10 +1,12 @@
-FROM python:3.7
+FROM python:3.6
 
 MAINTAINER Enver Usta <enver.usta@outlook.com>
 
-WORKDIR /usr/src/app
+#COPY images/book.png .
+#COPY images/holding_book.jpeg .
 
-COPY images .
+COPY . .
+
 COPY feature-matching.py .
 COPY requirements.txt .
 

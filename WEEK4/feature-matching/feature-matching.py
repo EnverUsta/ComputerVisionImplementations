@@ -13,7 +13,7 @@ def feature_match(img1, img2):
     return matching_result
 
 
-
+'''
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
@@ -26,4 +26,11 @@ while True:
     cv2.imshow('Matching Result', matching_result)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+'''
 
+imgBook = cv2.imread('images/book.png')
+holdingBook = cv2.imread('images/holding_book.jpeg')
+resultImage = feature_match(imgBook, holdingBook)
+cv2.imwrite('result.jpeg', resultImage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
