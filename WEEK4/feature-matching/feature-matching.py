@@ -19,7 +19,6 @@ cap.set(3, 640)
 cap.set(4, 480)
 cap.set(10, 150)
 
-
 while True:
     success, capImage = cap.read()
     imgBook = cv2.imread('images/book.png')
@@ -27,8 +26,4 @@ while True:
     cv2.imshow('Matching Result', matching_result)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
-
-
-
 
